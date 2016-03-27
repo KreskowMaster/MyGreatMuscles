@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		08428D4A1CA607F60099C069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08428D491CA607F60099C069 /* AppDelegate.swift */; };
-		08428D4C1CA607F60099C069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08428D4B1CA607F60099C069 /* ViewController.swift */; };
+		08428D4C1CA607F60099C069 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08428D4B1CA607F60099C069 /* CategoriesViewController.swift */; };
 		08428D4F1CA607F60099C069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08428D4D1CA607F60099C069 /* Main.storyboard */; };
 		08428D521CA607F60099C069 /* MyGreatMuscles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08428D501CA607F60099C069 /* MyGreatMuscles.xcdatamodeld */; };
 		08428D541CA607F70099C069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08428D531CA607F70099C069 /* Assets.xcassets */; };
 		08428D571CA607F70099C069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08428D551CA607F70099C069 /* LaunchScreen.storyboard */; };
 		08428D621CA607F70099C069 /* MyGreatMusclesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08428D611CA607F70099C069 /* MyGreatMusclesTests.swift */; };
 		08428D6D1CA607F80099C069 /* MyGreatMusclesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08428D6C1CA607F80099C069 /* MyGreatMusclesUITests.swift */; };
+		08615FFE1CA7409300118A1A /* ColorsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615FFD1CA7409300118A1A /* ColorsBase.swift */; };
+		086160011CA7422B00118A1A /* HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086160001CA7422B00118A1A /* HexConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		08428D461CA607F60099C069 /* MyGreatMuscles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGreatMuscles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08428D491CA607F60099C069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08428D4B1CA607F60099C069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		08428D4B1CA607F60099C069 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		08428D4E1CA607F60099C069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08428D511CA607F60099C069 /* MyGreatMuscles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyGreatMuscles.xcdatamodel; sourceTree = "<group>"; };
 		08428D531CA607F70099C069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		08428D681CA607F80099C069 /* MyGreatMusclesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGreatMusclesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08428D6C1CA607F80099C069 /* MyGreatMusclesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGreatMusclesUITests.swift; sourceTree = "<group>"; };
 		08428D6E1CA607F80099C069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08615FFD1CA7409300118A1A /* ColorsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsBase.swift; sourceTree = "<group>"; };
+		086160001CA7422B00118A1A /* HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,9 @@
 		08428D481CA607F60099C069 /* MyGreatMuscles */ = {
 			isa = PBXGroup;
 			children = (
+				08615FFB1CA7406000118A1A /* Design */,
 				08428D491CA607F60099C069 /* AppDelegate.swift */,
-				08428D4B1CA607F60099C069 /* ViewController.swift */,
+				08428D4B1CA607F60099C069 /* CategoriesViewController.swift */,
 				08428D4D1CA607F60099C069 /* Main.storyboard */,
 				08428D531CA607F70099C069 /* Assets.xcassets */,
 				08428D551CA607F70099C069 /* LaunchScreen.storyboard */,
@@ -126,6 +131,31 @@
 				08428D6E1CA607F80099C069 /* Info.plist */,
 			);
 			path = MyGreatMusclesUITests;
+			sourceTree = "<group>";
+		};
+		08615FFB1CA7406000118A1A /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				08615FFF1CA7420E00118A1A /* Materials */,
+				08615FFC1CA7406F00118A1A /* Extensions */,
+			);
+			name = Design;
+			sourceTree = "<group>";
+		};
+		08615FFC1CA7406F00118A1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				086160001CA7422B00118A1A /* HexConverter.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		08615FFF1CA7420E00118A1A /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				08615FFD1CA7409300118A1A /* ColorsBase.swift */,
+			);
+			name = Materials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08428D4C1CA607F60099C069 /* ViewController.swift in Sources */,
+				086160011CA7422B00118A1A /* HexConverter.swift in Sources */,
+				08615FFE1CA7409300118A1A /* ColorsBase.swift in Sources */,
+				08428D4C1CA607F60099C069 /* CategoriesViewController.swift in Sources */,
 				08428D4A1CA607F60099C069 /* AppDelegate.swift in Sources */,
 				08428D521CA607F60099C069 /* MyGreatMuscles.xcdatamodeld in Sources */,
 			);
@@ -489,6 +521,7 @@
 				08428D731CA607F80099C069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08428D741CA607F80099C069 /* Build configuration list for PBXNativeTarget "MyGreatMusclesTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +530,7 @@
 				08428D761CA607F80099C069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08428D771CA607F80099C069 /* Build configuration list for PBXNativeTarget "MyGreatMusclesUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +539,7 @@
 				08428D791CA607F80099C069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
