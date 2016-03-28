@@ -53,9 +53,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrellumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TfW-fd-8sh">
-                                <rect key="frame" x="45" y="376" width="92" height="92"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prellum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-wV-X0D">
                                 <rect key="frame" x="60" y="473" width="63" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
@@ -89,6 +86,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrellumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TfW-fd-8sh">
+                                <rect key="frame" x="45" y="376" width="92" height="92"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -130,18 +130,26 @@
                     <navigationItem key="navigationItem" title="Muscles Category" id="onb-pS-80w"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="sO1-01-sDW" kind="show" id="WN1-Jf-Bz1"/>
+                        <outlet property="backCategory" destination="3fB-nW-IbQ" id="4Se-Wv-fnS"/>
+                        <outlet property="bicepsCategory" destination="BtJ-5s-fJ4" id="BGG-5G-Fe1"/>
+                        <outlet property="chestCategory" destination="e8F-Oi-eS5" id="X6o-I1-5O6"/>
+                        <outlet property="legsCategory" destination="k0Y-vE-p3a" id="HSp-Gf-L7P"/>
+                        <outlet property="neckCategory" destination="6PD-HX-GJP" id="8t1-XL-P7f"/>
+                        <outlet property="prellumCategory" destination="TfW-fd-8sh" id="jbh-CG-O1n"/>
+                        <outlet property="shouldersCategory" destination="vcI-gK-Y1X" id="JZ7-w7-NRl"/>
+                        <outlet property="tricepsCategory" destination="LTd-xg-VIY" id="cKD-wy-XKK"/>
+                        <segue destination="sO1-01-sDW" kind="show" identifier="" id="h4o-RY-hid"/>
+                        <segue destination="mM3-Oy-kcu" kind="show" identifier="" id="TP6-gy-G9I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2186.5" y="478.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Timeline View Controller-->
         <scene sceneID="Zev-lB-PuK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XEv-xc-BxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="sO1-01-sDW" sceneMemberID="viewController">
+                <viewController id="sO1-01-sDW" customClass="TimelineViewController" customModule="MyGreatMuscles" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7ZQ-Oe-Ris"/>
                         <viewControllerLayoutGuide type="bottom" id="YlQ-ZL-G0w"/>
@@ -150,38 +158,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Muscles100%" translatesAutoresizingMaskIntoConstraints="NO" id="k4J-KS-Bit">
-                                <rect key="frame" x="45" y="69" width="285" height="555"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDq-Ax-9TA">
-                                <rect key="frame" x="45" y="636" width="142" height="21"/>
-                                <color key="backgroundColor" red="0.87450980392156863" green="0.80000000000000004" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1f-wF-sZ3">
-                                <rect key="frame" x="188" y="636" width="142" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Prellum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1f-wF-sZ3">
+                                <rect key="frame" x="188" y="577" width="142" height="35"/>
                                 <color key="backgroundColor" red="0.57647058823529407" green="0.52549019607843139" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cWm-hg-zEu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Muscles100%" translatesAutoresizingMaskIntoConstraints="NO" id="k4J-KS-Bit">
+                                <rect key="frame" x="50" y="76" width="275" height="489"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc3-OX-Jfu">
+                                <rect key="frame" x="199" y="630" width="120" height="27"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="L7N-cC-Z3u"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextTapped:" destination="sO1-01-sDW" eventType="touchUpInside" id="Rem-Ky-9uR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="03.04.2001" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDq-Ax-9TA">
+                                <rect key="frame" x="45" y="577" width="142" height="35"/>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.80000000000000004" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ghQ-zc-TJK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-aV-Y6y">
+                                <rect key="frame" x="56" y="630" width="120" height="27"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="YLF-Cg-qn9"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backTapped:" destination="sO1-01-sDW" eventType="touchUpInside" id="tAA-WT-Kag"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="YlQ-ZL-G0w" firstAttribute="top" secondItem="kt0-aV-Y6y" secondAttribute="bottom" constant="10" id="0bX-Jg-MtU"/>
                             <constraint firstItem="r1f-wF-sZ3" firstAttribute="leading" secondItem="ZDq-Ax-9TA" secondAttribute="trailing" constant="5" id="1aX-xy-7WU"/>
                             <constraint firstItem="ZDq-Ax-9TA" firstAttribute="top" secondItem="k4J-KS-Bit" secondAttribute="bottom" constant="12" id="3JO-gV-A0e"/>
+                            <constraint firstAttribute="trailing" secondItem="k4J-KS-Bit" secondAttribute="trailing" constant="50" id="4tv-dI-LMH"/>
+                            <constraint firstItem="Uc3-OX-Jfu" firstAttribute="leading" secondItem="kt0-aV-Y6y" secondAttribute="trailing" constant="23" id="AOw-nA-SJp"/>
+                            <constraint firstItem="Uc3-OX-Jfu" firstAttribute="top" secondItem="r1f-wF-sZ3" secondAttribute="bottom" constant="18" id="HB2-R6-LC7"/>
                             <constraint firstAttribute="trailing" secondItem="r1f-wF-sZ3" secondAttribute="trailing" constant="45" id="Ifl-y1-sk3"/>
-                            <constraint firstItem="YlQ-ZL-G0w" firstAttribute="top" secondItem="r1f-wF-sZ3" secondAttribute="bottom" constant="10" id="Mez-69-yKN"/>
                             <constraint firstItem="r1f-wF-sZ3" firstAttribute="top" secondItem="k4J-KS-Bit" secondAttribute="bottom" constant="12" id="Mtc-rI-EcA"/>
-                            <constraint firstItem="YlQ-ZL-G0w" firstAttribute="top" secondItem="ZDq-Ax-9TA" secondAttribute="bottom" constant="10" id="ci6-xT-G1d"/>
-                            <constraint firstItem="k4J-KS-Bit" firstAttribute="leading" secondItem="NcY-i0-3lb" secondAttribute="leading" constant="45" id="hrx-Uj-Eda"/>
+                            <constraint firstItem="k4J-KS-Bit" firstAttribute="leading" secondItem="NcY-i0-3lb" secondAttribute="leading" constant="50" id="Nwq-2y-Elu"/>
+                            <constraint firstItem="YlQ-ZL-G0w" firstAttribute="top" secondItem="Uc3-OX-Jfu" secondAttribute="bottom" constant="10" id="SLV-uU-RRU"/>
+                            <constraint firstItem="kt0-aV-Y6y" firstAttribute="top" secondItem="ZDq-Ax-9TA" secondAttribute="bottom" constant="18" id="dxA-ff-QNN"/>
+                            <constraint firstItem="Uc3-OX-Jfu" firstAttribute="centerX" secondItem="r1f-wF-sZ3" secondAttribute="centerX" id="f72-Y2-TTj"/>
+                            <constraint firstItem="kt0-aV-Y6y" firstAttribute="leading" secondItem="NcY-i0-3lb" secondAttribute="leading" constant="56" id="iUh-Fs-RtJ"/>
                             <constraint firstItem="r1f-wF-sZ3" firstAttribute="leading" secondItem="ZDq-Ax-9TA" secondAttribute="trailing" constant="1" id="j7p-A8-KpE"/>
-                            <constraint firstItem="k4J-KS-Bit" firstAttribute="top" secondItem="7ZQ-Oe-Ris" secondAttribute="bottom" constant="5" id="jBc-Hq-fcu"/>
+                            <constraint firstItem="k4J-KS-Bit" firstAttribute="top" secondItem="7ZQ-Oe-Ris" secondAttribute="bottom" constant="12" id="jBc-Hq-fcu"/>
                             <constraint firstItem="ZDq-Ax-9TA" firstAttribute="width" secondItem="r1f-wF-sZ3" secondAttribute="width" id="mQg-uV-l1L"/>
+                            <constraint firstItem="kt0-aV-Y6y" firstAttribute="centerX" secondItem="ZDq-Ax-9TA" secondAttribute="centerX" id="nte-Vl-0bw"/>
                             <constraint firstItem="ZDq-Ax-9TA" firstAttribute="leading" secondItem="NcY-i0-3lb" secondAttribute="leading" constant="45" id="qGT-pW-XLP"/>
-                            <constraint firstAttribute="trailing" secondItem="k4J-KS-Bit" secondAttribute="trailing" constant="45" id="wwy-Sl-dl7"/>
+                            <constraint firstAttribute="trailing" secondItem="Uc3-OX-Jfu" secondAttribute="trailing" constant="56" id="xaE-eZ-FsR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -189,10 +246,172 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="E8Q-5R-psA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GC1-YQ-Y6a">
+                            <connections>
+                                <action selector="addTapped:" destination="sO1-01-sDW" id="1tZ-Tk-bCX"/>
+                                <segue destination="F4N-F5-Oa3" kind="show" id="yIK-ZF-n8y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="r1f-wF-sZ3" id="LdW-mN-DLb"/>
+                        <outlet property="dateLabel" destination="ZDq-Ax-9TA" id="ORd-6Z-TRy"/>
+                        <outlet property="muscleImageView" destination="k4J-KS-Bit" id="C3w-Yb-fQn"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEv-xc-BxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2694.5" y="478.5"/>
+            <point key="canvasLocation" x="2637.5" y="478.5"/>
+        </scene>
+        <!--Empty Timeline View Controller-->
+        <scene sceneID="1or-te-cUK">
+            <objects>
+                <viewController id="mM3-Oy-kcu" customClass="EmptyTimelineViewController" customModule="MyGreatMuscles" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sfi-Rs-Ajp"/>
+                        <viewControllerLayoutGuide type="bottom" id="jRv-94-TPe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="unn-fR-PSE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your Muscles!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiW-U4-oes">
+                                <rect key="frame" x="21" y="179" width="333" height="35"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzd-2N-ujv">
+                                <rect key="frame" x="79" y="249" width="217" height="217"/>
+                                <color key="backgroundColor" red="0.71764707569999997" green="0.65882354970000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="217" id="qp0-7f-AY2"/>
+                                </constraints>
+                                <state key="normal" image="PlusIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goTapped:" destination="mM3-Oy-kcu" eventType="touchUpInside" id="7eq-cY-V2e"/>
+                                    <segue destination="F4N-F5-Oa3" kind="push" id="Ycg-Ge-qKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pzd-2N-ujv" firstAttribute="leading" secondItem="unn-fR-PSE" secondAttribute="leading" constant="79" id="D2K-Vu-GR6"/>
+                            <constraint firstItem="IiW-U4-oes" firstAttribute="leading" secondItem="unn-fR-PSE" secondAttribute="leading" constant="21" id="Vkg-gy-LcR"/>
+                            <constraint firstAttribute="trailing" secondItem="pzd-2N-ujv" secondAttribute="trailing" constant="79" id="q1H-TD-Vpo"/>
+                            <constraint firstItem="pzd-2N-ujv" firstAttribute="top" secondItem="IiW-U4-oes" secondAttribute="bottom" constant="35" id="xD5-JW-mOK"/>
+                            <constraint firstItem="IiW-U4-oes" firstAttribute="top" secondItem="sfi-Rs-Ajp" secondAttribute="bottom" constant="115" id="xEA-XM-B4Z"/>
+                            <constraint firstAttribute="trailing" secondItem="IiW-U4-oes" secondAttribute="trailing" constant="21" id="xim-lf-7uA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="IiW-U4-oes" id="S56-r8-igz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DkE-qK-Yva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2186.5" y="1288.5"/>
+        </scene>
+        <!--Add Muscle View Controller-->
+        <scene sceneID="4Km-YT-QNE">
+            <objects>
+                <viewController id="F4N-F5-Oa3" customClass="AddMuscleViewController" customModule="MyGreatMuscles" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oav-zq-edc"/>
+                        <viewControllerLayoutGuide type="bottom" id="H3Y-6C-sm0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0QZ-7N-jaM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cQ-zj-i8r">
+                                <rect key="frame" x="79" y="464" width="217" height="70"/>
+                                <color key="backgroundColor" red="0.71764707569999997" green="0.65882354970000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Nx9-Eh-4Ki"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="27.03.2016">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dateTapped:" destination="F4N-F5-Oa3" eventType="touchUpInside" id="F86-fe-oXC"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DxS-T4-yyL">
+                                <rect key="frame" x="65" y="405" width="245" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <date key="date" timeIntervalSinceReferenceDate="480804397.803213">
+                                    <!--2016-03-27 20:46:37 +0000-->
+                                </date>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDK-wk-aiv">
+                                <rect key="frame" x="79" y="117" width="217" height="217"/>
+                                <color key="backgroundColor" red="0.71764707565307617" green="0.65882354974746704" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="217" id="cgk-PV-teo"/>
+                                </constraints>
+                                <state key="normal" image="CameraIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addPhotoTapped:" destination="F4N-F5-Oa3" eventType="touchUpInside" id="W8X-4S-UAA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12156862765550613" green="0.12941177189350128" blue="0.14117647707462311" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2cQ-zj-i8r" firstAttribute="top" secondItem="BDK-wk-aiv" secondAttribute="bottom" constant="130" id="0We-OG-34f"/>
+                            <constraint firstAttribute="trailing" secondItem="2cQ-zj-i8r" secondAttribute="trailing" constant="79" id="2Dl-XT-Z68"/>
+                            <constraint firstAttribute="trailing" secondItem="DxS-T4-yyL" secondAttribute="trailing" constant="65" id="8im-V7-zu1"/>
+                            <constraint firstAttribute="trailing" secondItem="BDK-wk-aiv" secondAttribute="trailing" constant="79" id="Kr6-Ls-0mk"/>
+                            <constraint firstItem="BDK-wk-aiv" firstAttribute="top" secondItem="oav-zq-edc" secondAttribute="bottom" constant="53" id="OSh-AY-qcG"/>
+                            <constraint firstItem="H3Y-6C-sm0" firstAttribute="top" secondItem="DxS-T4-yyL" secondAttribute="bottom" constant="46" id="YZV-h4-7Fq"/>
+                            <constraint firstItem="DxS-T4-yyL" firstAttribute="leading" secondItem="0QZ-7N-jaM" secondAttribute="leading" constant="65" id="b4V-ee-9kD"/>
+                            <constraint firstItem="2cQ-zj-i8r" firstAttribute="leading" secondItem="0QZ-7N-jaM" secondAttribute="leading" constant="79" id="cDv-xj-QMq"/>
+                            <constraint firstItem="BDK-wk-aiv" firstAttribute="leading" secondItem="0QZ-7N-jaM" secondAttribute="leading" constant="79" id="gCm-KF-M7C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EDm-64-Lu6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yju-2D-OZ6">
+                            <connections>
+                                <action selector="doneTapped:" destination="F4N-F5-Oa3" id="DuT-Ax-zmC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="2cQ-zj-i8r" id="GJV-dV-O9P"/>
+                        <outlet property="datePicker" destination="DxS-T4-yyL" id="uXI-WX-br2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQb-1u-MBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3098.5" y="478.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="RJ5-hr-coV">
@@ -224,12 +443,17 @@
     <resources>
         <image name="BackIcon" width="92" height="92"/>
         <image name="BicepsIcon" width="92" height="92"/>
+        <image name="CameraIcon" width="147" height="147"/>
         <image name="ChestIcon" width="92" height="92"/>
         <image name="LegsIcon" width="92" height="92"/>
         <image name="Muscles100%" width="375" height="667"/>
         <image name="NeckIcon" width="92" height="92"/>
+        <image name="PlusIcon" width="147" height="147"/>
         <image name="PrellumIcon" width="92" height="92"/>
         <image name="ShouldersIcon" width="92" height="92"/>
         <image name="TricepsIcon" width="92" height="92"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ycg-Ge-qKe"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,9 @@
 		08428D6D1CA607F80099C069 /* MyGreatMusclesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08428D6C1CA607F80099C069 /* MyGreatMusclesUITests.swift */; };
 		08615FFE1CA7409300118A1A /* ColorsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615FFD1CA7409300118A1A /* ColorsBase.swift */; };
 		086160011CA7422B00118A1A /* HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086160001CA7422B00118A1A /* HexConverter.swift */; };
+		088B4BCA1CA9BD9D00B3F122 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BC91CA9BD9D00B3F122 /* TimelineViewController.swift */; };
+		088B4BCC1CA9BE0B00B3F122 /* AddMuscleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BCB1CA9BE0B00B3F122 /* AddMuscleViewController.swift */; };
+		088B4BCE1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		08428D6E1CA607F80099C069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08615FFD1CA7409300118A1A /* ColorsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsBase.swift; sourceTree = "<group>"; };
 		086160001CA7422B00118A1A /* HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexConverter.swift; sourceTree = "<group>"; };
+		088B4BC91CA9BD9D00B3F122 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		088B4BCB1CA9BE0B00B3F122 /* AddMuscleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMuscleViewController.swift; sourceTree = "<group>"; };
+		088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +109,9 @@
 		08428D481CA607F60099C069 /* MyGreatMuscles */ = {
 			isa = PBXGroup;
 			children = (
+				088B4BC61CA9BD2400B3F122 /* ViewControllers */,
 				08615FFB1CA7406000118A1A /* Design */,
 				08428D491CA607F60099C069 /* AppDelegate.swift */,
-				08428D4B1CA607F60099C069 /* CategoriesViewController.swift */,
 				08428D4D1CA607F60099C069 /* Main.storyboard */,
 				08428D531CA607F70099C069 /* Assets.xcassets */,
 				08428D551CA607F70099C069 /* LaunchScreen.storyboard */,
@@ -156,6 +162,17 @@
 				08615FFD1CA7409300118A1A /* ColorsBase.swift */,
 			);
 			name = Materials;
+			sourceTree = "<group>";
+		};
+		088B4BC61CA9BD2400B3F122 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				08428D4B1CA607F60099C069 /* CategoriesViewController.swift */,
+				088B4BC91CA9BD9D00B3F122 /* TimelineViewController.swift */,
+				088B4BCB1CA9BE0B00B3F122 /* AddMuscleViewController.swift */,
+				088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,9 +311,12 @@
 			files = (
 				086160011CA7422B00118A1A /* HexConverter.swift in Sources */,
 				08615FFE1CA7409300118A1A /* ColorsBase.swift in Sources */,
+				088B4BCC1CA9BE0B00B3F122 /* AddMuscleViewController.swift in Sources */,
+				088B4BCE1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift in Sources */,
 				08428D4C1CA607F60099C069 /* CategoriesViewController.swift in Sources */,
 				08428D4A1CA607F60099C069 /* AppDelegate.swift in Sources */,
 				08428D521CA607F60099C069 /* MyGreatMuscles.xcdatamodeld in Sources */,
+				088B4BCA1CA9BD9D00B3F122 /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,23 @@
 import UIKit
 
 class CategoriesViewController: UIViewController {
-
+    
+    // MARK: - Categories Outlets
+    
+    @IBOutlet weak var bicepsCategory: UIImageView!
+    @IBOutlet weak var legsCategory: UIImageView!
+    @IBOutlet weak var tricepsCategory: UIImageView!
+    @IBOutlet weak var chestCategory: UIImageView!
+    @IBOutlet weak var prellumCategory: UIImageView!
+    @IBOutlet weak var backCategory: UIImageView!
+    @IBOutlet weak var neckCategory: UIImageView!
+    @IBOutlet weak var shouldersCategory: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.performSegueWithIdentifier("test", sender: self)
     }
+    
 
 
 }
