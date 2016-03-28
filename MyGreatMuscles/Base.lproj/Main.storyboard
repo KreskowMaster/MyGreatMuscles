@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BicepsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BtJ-5s-fJ4">
-                                <rect key="frame" x="45" y="94" width="92" height="92"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biceps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgj-OP-DXv">
                                 <rect key="frame" x="63" y="191" width="56" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
@@ -53,6 +50,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrellumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TfW-fd-8sh">
+                                <rect key="frame" x="45" y="376" width="92" height="92"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prellum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-wV-X0D">
                                 <rect key="frame" x="60" y="473" width="63" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
@@ -86,8 +86,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrellumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TfW-fd-8sh">
-                                <rect key="frame" x="45" y="376" width="92" height="92"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BicepsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BtJ-5s-fJ4">
+                                <rect key="frame" x="45" y="94" width="92" height="92"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>

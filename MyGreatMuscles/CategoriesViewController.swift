@@ -21,12 +21,29 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var neckCategory: UIImageView!
     @IBOutlet weak var shouldersCategory: UIImageView!
     
+    var musclesCategories : [UIImageView] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.performSegueWithIdentifier("test", sender: self)
+        
+        // Assigning all categories to array
+        musclesCategories = [bicepsCategory, legsCategory, tricepsCategory, chestCategory, prellumCategory, backCategory, neckCategory, shouldersCategory]
+        
+        // MARK: - Recognizing Tap of Categories
+        
+        for muscleCategory in musclesCategories {
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("categoryTapped"))
+            muscleCategory.userInteractionEnabled = true
+            muscleCategory.addGestureRecognizer(tapGestureRecognizer)
+        }
     }
     
-
-
+    // MARK: - FUNCTION - categoryTapped
+    func categoryTapped() {
+        self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
+    }
+    
+    
+    
 }
 
