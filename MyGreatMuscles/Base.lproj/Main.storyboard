@@ -17,57 +17,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u63-t1-jg5" userLabel="BicepsButton">
+                                <rect key="frame" x="45" y="94" width="92" height="92"/>
+                                <state key="normal" image="BicepsIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QFP-HC-38p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F9-Uc-Hm7" userLabel="LegsButton">
+                                <rect key="frame" x="238" y="94" width="92" height="92"/>
+                                <state key="normal" image="LegsIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQe-lh-eTn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqS-yy-ImH" userLabel="TricepsButton">
+                                <rect key="frame" x="45" y="235" width="92" height="92"/>
+                                <state key="normal" image="TricepsIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FrF-bQ-wYJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqy-ab-zlK" userLabel="ChestButton">
+                                <rect key="frame" x="238" y="235" width="92" height="92"/>
+                                <state key="normal" image="ChestIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfI-5f-kpk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMg-7e-G0a" userLabel="PrellumButton">
+                                <rect key="frame" x="45" y="376" width="92" height="92"/>
+                                <state key="normal" image="PrellumIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZG-Zd-BUt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-P2-QZz" userLabel="BackButton">
+                                <rect key="frame" x="238" y="376" width="92" height="92"/>
+                                <state key="normal" image="BackIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AhB-MT-75W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bce-0e-yJw" userLabel="NeckButton">
+                                <rect key="frame" x="45" y="517" width="92" height="92"/>
+                                <state key="normal" image="NeckIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qw1-7x-ow8"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biceps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgj-OP-DXv">
                                 <rect key="frame" x="63" y="191" width="56" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TricepsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LTd-xg-VIY">
-                                <rect key="frame" x="45" y="235" width="92" height="92"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triceps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjs-P9-L7k">
-                                <rect key="frame" x="60" y="332" width="63" height="24"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LegsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="k0Y-vE-p3a">
-                                <rect key="frame" x="238" y="94" width="92" height="92"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-ya-06t">
                                 <rect key="frame" x="263" y="191" width="42" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChestIcon" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-Oi-eS5">
-                                <rect key="frame" x="238" y="235" width="92" height="92"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triceps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjs-P9-L7k">
+                                <rect key="frame" x="60" y="332" width="63" height="24"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUU-QN-e3v">
                                 <rect key="frame" x="259" y="332" width="50" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrellumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TfW-fd-8sh">
-                                <rect key="frame" x="45" y="376" width="92" height="92"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prellum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-wV-X0D">
                                 <rect key="frame" x="60" y="473" width="63" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3fB-nW-IbQ">
-                                <rect key="frame" x="238" y="376" width="92" height="92"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NeckIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6PD-HX-GJP">
-                                <rect key="frame" x="45" y="517" width="92" height="92"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShouldersIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vcI-gK-Y1X">
-                                <rect key="frame" x="238" y="517" width="92" height="92"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvc-e4-vOO">
                                 <rect key="frame" x="242" y="614" width="85" height="24"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
@@ -86,58 +114,53 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BicepsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BtJ-5s-fJ4">
-                                <rect key="frame" x="45" y="94" width="92" height="92"/>
-                            </imageView>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUn-1C-lXr" userLabel="ShouldersButton">
+                                <rect key="frame" x="238" y="517" width="92" height="92"/>
+                                <state key="normal" image="ShouldersIcon"/>
+                                <connections>
+                                    <action selector="categoryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jbj-GT-nHY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="TfW-fd-8sh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="0Ck-Ac-WDQ"/>
-                            <constraint firstItem="3fB-nW-IbQ" firstAttribute="top" secondItem="EUU-QN-e3v" secondAttribute="bottom" constant="20" id="43M-19-ndn"/>
-                            <constraint firstItem="kgj-OP-DXv" firstAttribute="top" secondItem="BtJ-5s-fJ4" secondAttribute="bottom" constant="5" id="4DH-mY-RSl"/>
-                            <constraint firstItem="6PD-HX-GJP" firstAttribute="top" secondItem="Hor-wV-X0D" secondAttribute="bottom" constant="20" id="5gT-Ln-zoI"/>
-                            <constraint firstItem="Jvc-e4-vOO" firstAttribute="centerX" secondItem="vcI-gK-Y1X" secondAttribute="centerX" id="E0M-3m-Mig"/>
-                            <constraint firstAttribute="trailing" secondItem="vcI-gK-Y1X" secondAttribute="trailing" constant="45" id="F3C-Ws-vvk"/>
-                            <constraint firstItem="vcI-gK-Y1X" firstAttribute="top" secondItem="vI8-LX-btC" secondAttribute="bottom" constant="20" id="G3U-TX-61H"/>
-                            <constraint firstItem="hvx-ya-06t" firstAttribute="centerX" secondItem="k0Y-vE-p3a" secondAttribute="centerX" id="Ggq-Hw-syt"/>
-                            <constraint firstItem="vI8-LX-btC" firstAttribute="top" secondItem="3fB-nW-IbQ" secondAttribute="bottom" constant="5" id="HnM-Rg-SY7"/>
-                            <constraint firstAttribute="trailing" secondItem="e8F-Oi-eS5" secondAttribute="trailing" constant="45" id="I9U-4O-ASh"/>
-                            <constraint firstItem="hjs-P9-L7k" firstAttribute="centerX" secondItem="LTd-xg-VIY" secondAttribute="centerX" id="IQH-cB-6PP"/>
-                            <constraint firstItem="e8F-Oi-eS5" firstAttribute="top" secondItem="hvx-ya-06t" secondAttribute="bottom" constant="20" id="Jnr-cX-h1w"/>
-                            <constraint firstItem="k0Y-vE-p3a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Kfy-4Q-AY0"/>
-                            <constraint firstAttribute="trailing" secondItem="k0Y-vE-p3a" secondAttribute="trailing" constant="45" id="N6K-d3-TYP"/>
-                            <constraint firstItem="NK8-xw-Y6u" firstAttribute="centerX" secondItem="6PD-HX-GJP" secondAttribute="centerX" id="Pf3-ox-cBh"/>
-                            <constraint firstItem="vI8-LX-btC" firstAttribute="centerX" secondItem="3fB-nW-IbQ" secondAttribute="centerX" id="QDS-on-q7o"/>
-                            <constraint firstItem="6PD-HX-GJP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="SFe-HI-Hly"/>
-                            <constraint firstItem="Jvc-e4-vOO" firstAttribute="top" secondItem="vcI-gK-Y1X" secondAttribute="bottom" constant="5" id="T27-td-yw0"/>
-                            <constraint firstItem="LTd-xg-VIY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="WML-V8-XJ6"/>
-                            <constraint firstItem="hjs-P9-L7k" firstAttribute="top" secondItem="LTd-xg-VIY" secondAttribute="bottom" constant="5" id="YCR-13-Ozy"/>
-                            <constraint firstItem="Hor-wV-X0D" firstAttribute="top" secondItem="TfW-fd-8sh" secondAttribute="bottom" constant="5" id="a28-7M-VmD"/>
-                            <constraint firstItem="EUU-QN-e3v" firstAttribute="top" secondItem="e8F-Oi-eS5" secondAttribute="bottom" constant="5" id="a9f-N2-b9C"/>
-                            <constraint firstItem="hvx-ya-06t" firstAttribute="top" secondItem="k0Y-vE-p3a" secondAttribute="bottom" constant="5" id="be9-dA-Dlw"/>
-                            <constraint firstItem="hvx-ya-06t" firstAttribute="top" secondItem="k0Y-vE-p3a" secondAttribute="bottom" constant="5" id="bzT-ED-9qs"/>
-                            <constraint firstItem="BtJ-5s-fJ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="fjK-oA-Bfa"/>
-                            <constraint firstItem="kgj-OP-DXv" firstAttribute="centerX" secondItem="BtJ-5s-fJ4" secondAttribute="centerX" id="fp0-cW-nBD"/>
-                            <constraint firstItem="LTd-xg-VIY" firstAttribute="top" secondItem="kgj-OP-DXv" secondAttribute="bottom" constant="20" id="hHw-8m-Tjv"/>
-                            <constraint firstAttribute="trailing" secondItem="3fB-nW-IbQ" secondAttribute="trailing" constant="45" id="kKL-Ej-x2u"/>
-                            <constraint firstItem="Hor-wV-X0D" firstAttribute="centerX" secondItem="TfW-fd-8sh" secondAttribute="centerX" id="kPH-Og-4F0"/>
-                            <constraint firstItem="NK8-xw-Y6u" firstAttribute="top" secondItem="6PD-HX-GJP" secondAttribute="bottom" constant="5" id="p7A-1L-5Ph"/>
-                            <constraint firstItem="EUU-QN-e3v" firstAttribute="centerX" secondItem="e8F-Oi-eS5" secondAttribute="centerX" id="pPf-c4-dEo"/>
-                            <constraint firstItem="TfW-fd-8sh" firstAttribute="top" secondItem="hjs-P9-L7k" secondAttribute="bottom" constant="20" id="tGj-hd-Mwn"/>
-                            <constraint firstItem="BtJ-5s-fJ4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="x72-3m-9Zj"/>
+                            <constraint firstItem="oqS-yy-ImH" firstAttribute="top" secondItem="kgj-OP-DXv" secondAttribute="bottom" constant="20" id="8pA-B6-kbF"/>
+                            <constraint firstItem="hjs-P9-L7k" firstAttribute="top" secondItem="oqS-yy-ImH" secondAttribute="bottom" constant="5" id="Ci6-5i-2Yb"/>
+                            <constraint firstItem="bce-0e-yJw" firstAttribute="top" secondItem="Hor-wV-X0D" secondAttribute="bottom" constant="20" id="EMk-6y-Mca"/>
+                            <constraint firstItem="Hor-wV-X0D" firstAttribute="top" secondItem="qMg-7e-G0a" secondAttribute="bottom" constant="5" id="HaJ-kJ-U2N"/>
+                            <constraint firstItem="Jvc-e4-vOO" firstAttribute="top" secondItem="hUn-1C-lXr" secondAttribute="bottom" constant="5" id="J5W-at-dur"/>
+                            <constraint firstAttribute="trailing" secondItem="1F9-Uc-Hm7" secondAttribute="trailing" constant="45" id="LDr-F3-KYP"/>
+                            <constraint firstItem="qMg-7e-G0a" firstAttribute="centerX" secondItem="Hor-wV-X0D" secondAttribute="centerX" id="LSK-18-tLf"/>
+                            <constraint firstItem="bce-0e-yJw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="NHJ-YU-ZIC"/>
+                            <constraint firstItem="qMg-7e-G0a" firstAttribute="top" secondItem="hjs-P9-L7k" secondAttribute="bottom" constant="20" id="Okf-bY-gbg"/>
+                            <constraint firstItem="kgj-OP-DXv" firstAttribute="centerX" secondItem="u63-t1-jg5" secondAttribute="centerX" id="Rdn-uE-iia"/>
+                            <constraint firstItem="vI8-LX-btC" firstAttribute="top" secondItem="dbg-P2-QZz" secondAttribute="bottom" constant="5" id="RwT-HR-deZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Iqy-ab-zlK" secondAttribute="trailing" constant="45" id="SBt-n3-t85"/>
+                            <constraint firstItem="hUn-1C-lXr" firstAttribute="centerX" secondItem="Jvc-e4-vOO" secondAttribute="centerX" id="STH-Fh-K2Y"/>
+                            <constraint firstItem="kgj-OP-DXv" firstAttribute="top" secondItem="u63-t1-jg5" secondAttribute="bottom" constant="5" id="T2U-ZH-WXe"/>
+                            <constraint firstItem="hvx-ya-06t" firstAttribute="top" secondItem="1F9-Uc-Hm7" secondAttribute="bottom" constant="5" id="UBQ-ML-Jky"/>
+                            <constraint firstAttribute="trailing" secondItem="hUn-1C-lXr" secondAttribute="trailing" constant="45" id="USl-VI-Sim"/>
+                            <constraint firstItem="1F9-Uc-Hm7" firstAttribute="leading" secondItem="hvx-ya-06t" secondAttribute="trailing" constant="-67" id="VEf-5e-s4l"/>
+                            <constraint firstItem="dbg-P2-QZz" firstAttribute="top" secondItem="EUU-QN-e3v" secondAttribute="bottom" constant="20" id="YN8-n8-4Ml"/>
+                            <constraint firstItem="hUn-1C-lXr" firstAttribute="top" secondItem="vI8-LX-btC" secondAttribute="bottom" constant="20" id="Z2S-Vr-4j7"/>
+                            <constraint firstItem="u63-t1-jg5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Zy7-g0-zf8"/>
+                            <constraint firstItem="u63-t1-jg5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="d3I-YL-ijW"/>
+                            <constraint firstAttribute="trailing" secondItem="dbg-P2-QZz" secondAttribute="trailing" constant="45" id="e3L-jp-ijJ"/>
+                            <constraint firstItem="Iqy-ab-zlK" firstAttribute="top" secondItem="hvx-ya-06t" secondAttribute="bottom" constant="20" id="neG-XJ-145"/>
+                            <constraint firstItem="EUU-QN-e3v" firstAttribute="top" secondItem="Iqy-ab-zlK" secondAttribute="bottom" constant="5" id="nil-wX-o6J"/>
+                            <constraint firstItem="dbg-P2-QZz" firstAttribute="centerX" secondItem="vI8-LX-btC" secondAttribute="centerX" id="nsS-c1-cx4"/>
+                            <constraint firstItem="Iqy-ab-zlK" firstAttribute="centerX" secondItem="EUU-QN-e3v" secondAttribute="centerX" id="pvF-DS-GqL"/>
+                            <constraint firstItem="1F9-Uc-Hm7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="qq6-zP-LNk"/>
+                            <constraint firstItem="NK8-xw-Y6u" firstAttribute="top" secondItem="bce-0e-yJw" secondAttribute="bottom" constant="5" id="rLt-Wg-Toj"/>
+                            <constraint firstItem="qMg-7e-G0a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="s2r-5M-klP"/>
+                            <constraint firstItem="oqS-yy-ImH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="45" id="sa8-gG-Uq7"/>
+                            <constraint firstItem="oqS-yy-ImH" firstAttribute="centerX" secondItem="hjs-P9-L7k" secondAttribute="centerX" id="ups-vC-5d4"/>
+                            <constraint firstItem="bce-0e-yJw" firstAttribute="centerX" secondItem="NK8-xw-Y6u" secondAttribute="centerX" id="vJA-AS-OOQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Muscles Category" id="onb-pS-80w"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="backCategory" destination="3fB-nW-IbQ" id="4Se-Wv-fnS"/>
-                        <outlet property="bicepsCategory" destination="BtJ-5s-fJ4" id="BGG-5G-Fe1"/>
-                        <outlet property="chestCategory" destination="e8F-Oi-eS5" id="X6o-I1-5O6"/>
-                        <outlet property="legsCategory" destination="k0Y-vE-p3a" id="HSp-Gf-L7P"/>
-                        <outlet property="neckCategory" destination="6PD-HX-GJP" id="8t1-XL-P7f"/>
-                        <outlet property="prellumCategory" destination="TfW-fd-8sh" id="jbh-CG-O1n"/>
-                        <outlet property="shouldersCategory" destination="vcI-gK-Y1X" id="JZ7-w7-NRl"/>
-                        <outlet property="tricepsCategory" destination="LTd-xg-VIY" id="cKD-wy-XKK"/>
                         <segue destination="sO1-01-sDW" kind="show" identifier="goToTimelineSegue" id="h4o-RY-hid"/>
                         <segue destination="mM3-Oy-kcu" kind="show" identifier="" id="TP6-gy-G9I"/>
                     </connections>
