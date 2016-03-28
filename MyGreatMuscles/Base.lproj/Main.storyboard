@@ -138,7 +138,7 @@
                         <outlet property="prellumCategory" destination="TfW-fd-8sh" id="jbh-CG-O1n"/>
                         <outlet property="shouldersCategory" destination="vcI-gK-Y1X" id="JZ7-w7-NRl"/>
                         <outlet property="tricepsCategory" destination="LTd-xg-VIY" id="cKD-wy-XKK"/>
-                        <segue destination="sO1-01-sDW" kind="show" identifier="" id="h4o-RY-hid"/>
+                        <segue destination="sO1-01-sDW" kind="show" identifier="goToTimelineSegue" id="h4o-RY-hid"/>
                         <segue destination="mM3-Oy-kcu" kind="show" identifier="" id="TP6-gy-G9I"/>
                     </connections>
                 </viewController>
@@ -250,7 +250,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GC1-YQ-Y6a">
                             <connections>
                                 <action selector="addTapped:" destination="sO1-01-sDW" id="1tZ-Tk-bCX"/>
-                                <segue destination="F4N-F5-Oa3" kind="show" id="yIK-ZF-n8y"/>
+                                <segue destination="F4N-F5-Oa3" kind="show" identifier="goToAddScreenSegue" id="yIK-ZF-n8y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -298,7 +298,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="goTapped:" destination="mM3-Oy-kcu" eventType="touchUpInside" id="7eq-cY-V2e"/>
-                                    <segue destination="F4N-F5-Oa3" kind="push" id="Ycg-Ge-qKe"/>
+                                    <segue destination="F4N-F5-Oa3" kind="push" identifier="switchToAddScreenSegue" id="Ycg-Ge-qKe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -437,7 +437,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qd4-M9-zMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1662.5" y="478.5"/>
+            <point key="canvasLocation" x="1733.5" y="478.5"/>
         </scene>
     </scenes>
     <resources>
