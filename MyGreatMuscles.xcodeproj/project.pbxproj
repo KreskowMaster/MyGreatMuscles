@@ -17,6 +17,10 @@
 		08428D6D1CA607F80099C069 /* MyGreatMusclesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08428D6C1CA607F80099C069 /* MyGreatMusclesUITests.swift */; };
 		08615FFE1CA7409300118A1A /* ColorsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615FFD1CA7409300118A1A /* ColorsBase.swift */; };
 		086160011CA7422B00118A1A /* HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086160001CA7422B00118A1A /* HexConverter.swift */; };
+		0872FF611CAB052200743978 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0872FF5D1CAB052200743978 /* Category+CoreDataProperties.swift */; };
+		0872FF621CAB052200743978 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0872FF5E1CAB052200743978 /* Category.swift */; };
+		0872FF631CAB052200743978 /* Muscle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0872FF5F1CAB052200743978 /* Muscle+CoreDataProperties.swift */; };
+		0872FF641CAB052200743978 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0872FF601CAB052200743978 /* Muscle.swift */; };
 		088B4BCA1CA9BD9D00B3F122 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BC91CA9BD9D00B3F122 /* TimelineViewController.swift */; };
 		088B4BCC1CA9BE0B00B3F122 /* AddMuscleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BCB1CA9BE0B00B3F122 /* AddMuscleViewController.swift */; };
 		088B4BCE1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */; };
@@ -56,6 +60,10 @@
 		08428D6E1CA607F80099C069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08615FFD1CA7409300118A1A /* ColorsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsBase.swift; sourceTree = "<group>"; };
 		086160001CA7422B00118A1A /* HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexConverter.swift; sourceTree = "<group>"; };
+		0872FF5D1CAB052200743978 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0872FF5E1CAB052200743978 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0872FF5F1CAB052200743978 /* Muscle+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Muscle+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0872FF601CAB052200743978 /* Muscle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
 		088B4BC91CA9BD9D00B3F122 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		088B4BCB1CA9BE0B00B3F122 /* AddMuscleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMuscleViewController.swift; sourceTree = "<group>"; };
 		088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTimelineViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 		08428D481CA607F60099C069 /* MyGreatMuscles */ = {
 			isa = PBXGroup;
 			children = (
+				0872FF5B1CAB04EB00743978 /* CoreData */,
 				088B4BC61CA9BD2400B3F122 /* ViewControllers */,
 				08615FFB1CA7406000118A1A /* Design */,
 				08428D491CA607F60099C069 /* AppDelegate.swift */,
@@ -162,6 +171,25 @@
 				08615FFD1CA7409300118A1A /* ColorsBase.swift */,
 			);
 			name = Materials;
+			sourceTree = "<group>";
+		};
+		0872FF5B1CAB04EB00743978 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0872FF5C1CAB04F200743978 /* Class */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		0872FF5C1CAB04F200743978 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0872FF5D1CAB052200743978 /* Category+CoreDataProperties.swift */,
+				0872FF5E1CAB052200743978 /* Category.swift */,
+				0872FF5F1CAB052200743978 /* Muscle+CoreDataProperties.swift */,
+				0872FF601CAB052200743978 /* Muscle.swift */,
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 		088B4BC61CA9BD2400B3F122 /* ViewControllers */ = {
@@ -309,7 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0872FF641CAB052200743978 /* Muscle.swift in Sources */,
 				086160011CA7422B00118A1A /* HexConverter.swift in Sources */,
+				0872FF621CAB052200743978 /* Category.swift in Sources */,
+				0872FF611CAB052200743978 /* Category+CoreDataProperties.swift in Sources */,
+				0872FF631CAB052200743978 /* Muscle+CoreDataProperties.swift in Sources */,
 				08615FFE1CA7409300118A1A /* ColorsBase.swift in Sources */,
 				088B4BCC1CA9BE0B00B3F122 /* AddMuscleViewController.swift in Sources */,
 				088B4BCE1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift in Sources */,

@@ -15,6 +15,16 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if !Category.hasCategories() {
+            print("Create Categories")
+            Category.createCategories()
+        } else {
+            print("categories are here")
+        }
+        
+        let testGet = Category.getCategory(1)
+        print("\(testGet.title), \(testGet.tag)")
+        
     }
     
     // MARK: - FUNCTION - categoryTapped
