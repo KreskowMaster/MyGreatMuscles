@@ -11,7 +11,14 @@ import CoreData
 
 
 class Muscle: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
+    
+    static func addMuscle(date : NSDate, photo : UIImage, category : Category) {
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let newMuscle = NSEntityDescription.insertNewObjectForEntityForName("Muscle", inManagedObjectContext: context) as! Muscle
+        newMuscle.date = date
+        newMuscle.photo = UIImageJPEGRepresentation(photo, 1.0)
+        newMuscle.category = category
+        try! context.save()
+    }
     
 }

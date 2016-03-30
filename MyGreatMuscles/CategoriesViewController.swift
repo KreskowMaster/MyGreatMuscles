@@ -11,32 +11,47 @@ import UIKit
 class CategoriesViewController: UIViewController {
     
     var musclesCategories : [UIImageView] = []
+    var selectedCategory : Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if !Category.hasCategories() {
-            print("Create Categories")
+            
+            print("Create categories")
             Category.createCategories()
+            
         } else {
-            print("categories are here")
+            
+            print("Categories are created\n")
+            
         }
         
-        let testGet = Category.getCategory(1)
-        print("\(testGet.title), \(testGet.tag)")
+    }
+    
+    @IBAction func categoryTapped(sender: UIButton) {
+        
+        let selectedTag = sender.tag
+        selectedCategory = Category.getCategory(selectedTag)
+        
+        // MARK: - TEST | Printing Values
+        print("CategoriesVC | Tag: \(selectedCategory!.tag!) Name: \(selectedCategory!.title!)")
+        
+        self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
         
     }
     
-    // MARK: - FUNCTION - categoryTapped
-    func categoryTapped() {
-        self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
-    }
     
-    @IBAction func categoryTapped(sender: AnyObject) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
+        if segue.identifier == "goToTimelineSegue" {
+            
+            let timelineVC = segue.destinationViewController as! TimelineViewController
+            timelineVC.selectedCategory = self.selectedCategory
+            
+        }
+        
     }
-    
     
     
     
