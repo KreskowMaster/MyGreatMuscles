@@ -8,7 +8,11 @@
 
 import UIKit
 
-class AddMuscleViewController: UIViewController {
+class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // MARK: - UIImagePickerController
+    
+    let imagePicker = UIImagePickerController()
     
     // MARK: - UIComponents Outlets
     
@@ -18,12 +22,17 @@ class AddMuscleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imagePicker.delegate = self
     }
     
     // MARK: - Adding Photo
     
     @IBAction func addPhotoTapped(sender: AnyObject) {
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
         
     }
     
@@ -37,5 +46,17 @@ class AddMuscleViewController: UIViewController {
     
     @IBAction func doneTapped(sender: AnyObject) {
         
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = pickedImage
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -26,19 +26,14 @@ class TimelineViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        Muscle.addMuscle(NSDate(), photo: UIImage(), category: selectedCategory!)
-        Muscle.addMuscle(NSDate(), photo: UIImage(), category: selectedCategory!)
-        Muscle.addMuscle(NSDate(), photo: UIImage(), category: selectedCategory!)
-        Muscle.addMuscle(NSDate(), photo: UIImage(), category: selectedCategory!)
-
-        
+//        Muscle.addMuscle(NSDate(), photo: UIImage(named: "Muscles100%")!, category: selectedCategory!)
+//        Muscle.addMuscle(NSDate(), photo: UIImage(named: "ultimate-pump-workout_d")!, category: selectedCategory!)
         
         // MARK: - Get All Muscles For Timeline
-        timelineMuscles = selectedCategory?.muscles?.allObjects as? [Muscle]
+        timelineMuscles = selectedCategory?.sortedMusclesByDate
         
-        // MARK: - Switching UIComponents Values to selectedCategory Values
-        categoryLabel.text = selectedCategory?.title
-        
+        // MARK: - Switch Start Up Values
+        changeValues()
         
     }
     
@@ -53,14 +48,17 @@ class TimelineViewController: UIViewController {
     @IBAction func backTapped(sender: AnyObject) {
         if currentMuscle > 0 {
             currentMuscle -= 1
-            categoryLabel.text = "\(currentMuscle)"
+            changeValues()
+            print("Muscle: \(currentMuscle) Date: \(timelineMuscles![currentMuscle].date!)\n")
+
         }
     }
     
     @IBAction func nextTapped(sender: AnyObject) {
         if currentMuscle < timelineMuscles!.count - 1 {
             currentMuscle += 1
-            categoryLabel.text = "\(currentMuscle)"
+            changeValues()
+            print("Muscle: \(currentMuscle) Date: \(timelineMuscles![currentMuscle].date!)\n")
         }
     }
     
@@ -68,5 +66,16 @@ class TimelineViewController: UIViewController {
     
     @IBAction func addTapped(sender: AnyObject) {
         
+    }
+    
+    // MARK: - Switching UIComponents Values to selectedCategory Values
+    
+    func changeValues() {
+        categoryLabel.text = selectedCategory?.title
+        muscleImageView.image = UIImage(data: timelineMuscles![currentMuscle].photo!)
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .ShortStyle
+        dateFormatter.timeStyle = .NoStyle
+        dateLabel.text = dateFormatter.stringFromDate(timelineMuscles![currentMuscle].date!)
     }
 }

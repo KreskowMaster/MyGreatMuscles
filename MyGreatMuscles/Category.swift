@@ -12,6 +12,17 @@ import CoreData
 
 class Category: NSManagedObject {
     
+    // Created By Thorsten Karrmarr Klusemann
+    var sortedMusclesByDate: [Muscle] {
+        guard let muscles = self.muscles else { return [] }
+        
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        let sortDescriptors = [ sortDescriptor ]
+        
+        return muscles.sortedArrayUsingDescriptors(sortDescriptors) as! [Muscle]
+    }
+
+    
     static func createCategories() {
         
         let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
