@@ -78,4 +78,11 @@ class TimelineViewController: UIViewController {
         dateFormatter.timeStyle = .NoStyle
         dateLabel.text = dateFormatter.stringFromDate(timelineMuscles![currentMuscle].date!)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToAddScreenSegue" {
+            let addVC = segue.destinationViewController as! AddMuscleViewController
+            addVC.selectedCategory = self.selectedCategory
+        }
+    }
 }

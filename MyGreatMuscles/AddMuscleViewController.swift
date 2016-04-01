@@ -10,9 +10,11 @@ import UIKit
 
 class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // MARK: - UIImagePickerController
+    // MARK: - Properties
     
     let imagePicker = UIImagePickerController()
+    var selectedImage : UIImage?
+    var selectedCategory : Category?
     
     // MARK: - UIComponents Outlets
     
@@ -29,10 +31,12 @@ class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func addPhotoTapped(sender: AnyObject) {
         
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .PhotoLibrary
+//        imagePicker.allowsEditing = false
+//        imagePicker.sourceType = .Camera
+//        
+//        presentViewController(imagePicker, animated: true, completion: nil)
         
-        presentViewController(imagePicker, animated: true, completion: nil)
+        selectPhotoSource()
         
     }
     
@@ -46,11 +50,43 @@ class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func doneTapped(sender: AnyObject) {
         
+        Muscle.addMuscle(NSDate(), photo: selectedImage!, category: selectedCategory!)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func selectPhotoSource() {
+        let actionSheetController : UIAlertController = UIAlertController(title: "Choose Source Type", message: "Select type of photo taking", preferredStyle: .ActionSheet)
+        
+        let cancelAction : UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) {
+            action in
+            
+        }
+        actionSheetController.addAction(cancelAction)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let cameraAction : UIAlertAction = UIAlertAction(title: "Camera", style: .Default) {
+                action in
+                
+            }
+            actionSheetController.addAction(cameraAction)
+        }
+        
+        let cameraRollAction : UIAlertAction = UIAlertAction(title: "Camera Roll", style: .Default) {
+            action in
+            self.imagePicker.allowsEditing = false
+            self.imagePicker.sourceType = .PhotoLibrary
+            self.presentViewController(self.imagePicker, animated: true
+                , completion: nil)
+        }
+        actionSheetController.addAction(cameraRollAction)
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = pickedImage
+            selectedImage = pickedImage
         }
         
         dismissViewControllerAnimated(true, completion: nil)

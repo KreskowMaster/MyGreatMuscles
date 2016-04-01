@@ -10,6 +10,10 @@ import UIKit
 
 class EmptyTimelineViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var selectedCategory : Category?
+    
     // MARK: - UIComponents Outlets
 
     @IBOutlet weak var infoLabel: UILabel!
@@ -18,10 +22,21 @@ class EmptyTimelineViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if selectedCategory?.muscles?.count > 0 {
+            self.dismissViewControllerAnimated(false, completion: nil)
+        }
+    }
+    
     // MARK: - Switching to AddMuscleViewController
     @IBAction func goTapped(sender: AnyObject) {
         
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let addVC = segue.destinationViewController as! AddMuscleViewController
+        addVC.selectedCategory = self.selectedCategory
     }
     
 

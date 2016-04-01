@@ -162,7 +162,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="sO1-01-sDW" kind="show" identifier="goToTimelineSegue" id="h4o-RY-hid"/>
-                        <segue destination="mM3-Oy-kcu" kind="show" identifier="emptyTimelineViewController" id="TP6-gy-G9I"/>
+                        <segue destination="mM3-Oy-kcu" kind="show" identifier="emptyCategorySegue" id="TP6-gy-G9I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -321,7 +321,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="goTapped:" destination="mM3-Oy-kcu" eventType="touchUpInside" id="7eq-cY-V2e"/>
-                                    <segue destination="F4N-F5-Oa3" kind="show" identifier="switchToAddScreenSegue" action="showDetailViewController:sender:" id="Ycg-Ge-qKe"/>
+                                    <segue destination="F4N-F5-Oa3" kind="show" id="Xgl-cj-dA3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -477,6 +477,6 @@
         <image name="TricepsIcon" width="92" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yIK-ZF-n8y"/>
+        <segue reference="Xgl-cj-dA3"/>
     </inferredMetricsTieBreakers>
 </document>
