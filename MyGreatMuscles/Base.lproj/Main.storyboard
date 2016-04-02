@@ -162,7 +162,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="sO1-01-sDW" kind="show" identifier="goToTimelineSegue" id="h4o-RY-hid"/>
-                        <segue destination="mM3-Oy-kcu" kind="show" identifier="emptyCategorySegue" id="TP6-gy-G9I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

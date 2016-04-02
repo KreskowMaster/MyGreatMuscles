@@ -37,11 +37,13 @@ class CategoriesViewController: UIViewController {
         // MARK: - TEST | Printing Values
         print("CategoriesVC | Tag: \(selectedCategory!.tag!) Name: \(selectedCategory!.title!)")
         
-        if selectedCategory?.muscles?.count > 0 {
-            self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
-        } else {
-            self.performSegueWithIdentifier("emptyCategorySegue", sender: self)
-        }
+        self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
+        
+//        if selectedCategory?.muscles?.count > 0 {
+//            self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
+//        } else {
+//            self.performSegueWithIdentifier("emptyCategorySegue", sender: self)
+//        }
         
     }
     
@@ -51,10 +53,11 @@ class CategoriesViewController: UIViewController {
         if segue.identifier == "goToTimelineSegue" {
             let timelineVC = segue.destinationViewController as! TimelineViewController
             timelineVC.selectedCategory = self.selectedCategory
-        } else if segue.identifier == "emptyCategorySegue" {
-            let emptyVC = segue.destinationViewController as! EmptyTimelineViewController
-            emptyVC.selectedCategory = self.selectedCategory
         }
+//        } else if segue.identifier == "emptyCategorySegue" {
+//            let emptyVC = segue.destinationViewController as! EmptyTimelineViewController
+//            emptyVC.selectedCategory = self.selectedCategory
+//        }
         
     }
     
