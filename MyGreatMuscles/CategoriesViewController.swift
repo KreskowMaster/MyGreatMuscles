@@ -39,11 +39,11 @@ class CategoriesViewController: UIViewController {
         
         self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
         
-//        if selectedCategory?.muscles?.count > 0 {
-//            self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
-//        } else {
-//            self.performSegueWithIdentifier("emptyCategorySegue", sender: self)
-//        }
+        if selectedCategory?.muscles?.count > 0 {
+            self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
+        } else {
+            self.performSegueWithIdentifier("emptyCategorySegue", sender: self)
+        }
         
     }
     
