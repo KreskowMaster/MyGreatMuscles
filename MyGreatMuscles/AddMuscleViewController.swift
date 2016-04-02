@@ -66,15 +66,16 @@ class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate
         }
         actionSheetController.addAction(cancelAction)
         
-//        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             let cameraAction : UIAlertAction = UIAlertAction(title: "Camera", style: .Default) {
                 action in
+                
                 self.imagePicker.allowsEditing = true
                 self.imagePicker.sourceType = .Camera
                 self.presentViewController(self.imagePicker, animated: true, completion: nil)
             }
             actionSheetController.addAction(cameraAction)
-//        }
+        }
         
         let cameraRollAction : UIAlertAction = UIAlertAction(title: "Camera Roll", style: .Default) {
             action in
