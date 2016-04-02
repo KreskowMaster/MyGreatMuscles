@@ -18,9 +18,12 @@ class CategoriesViewController: UIViewController {
         
         if !Category.hasCategories() {
             
-            showAlertWithTitle("Happy Birthday", message: "Happy birthday dad, less mass, more muscles!")
-            showAlertWithTitle("Thank You", message: "Biggest thanks to Karrmarr for help with creating app!")
-            
+            showAlertWithTitle("Happy Birthday", message: "Happy birthday dad, less mass, more muscles!") {
+                delay(300000) {
+                    self.showAlertWithTitle("Thank You", message: "Biggest thanks to Karrmarr for help with creating app!")
+                }
+            }
+          
             print("Create categories")
             Category.createCategories()
             
