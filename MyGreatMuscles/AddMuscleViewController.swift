@@ -21,12 +21,25 @@ class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var dateLabel: UIButton!
     
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+  
+    @IBOutlet weak var addPhotoButton: UIButton!
+  
+    @IBOutlet weak var photoImageView: UIImageView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
     }
-    
+  
+    override func viewDidAppear(animated: Bool) {
+      if selectedImage != nil {
+          addPhotoButton.enabled = false
+          addPhotoButton.hidden = true
+          photoImageView.hidden = false
+          photoImageView.image = selectedImage
+      }
+    }
+  
     // MARK: - Adding Photo
     
     @IBAction func addPhotoTapped(sender: AnyObject) {
