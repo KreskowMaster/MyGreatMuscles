@@ -18,6 +18,9 @@ class CategoriesViewController: UIViewController {
         
         if !Category.hasCategories() {
             
+            showAlertWithTitle("Happy Birthday", message: "Happy birthday dad, less mass, more muscles!")
+            showAlertWithTitle("Thank You", message: "Biggest thanks to Karrmarr for help with creating app!")
+            
             print("Create categories")
             Category.createCategories()
             
@@ -39,14 +42,6 @@ class CategoriesViewController: UIViewController {
         
         self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
       
-      /*
-        if selectedCategory?.muscles?.count > 0 {
-            self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
-        } else {
-            self.performSegueWithIdentifier("emptyCategorySegue", sender: self)
-        }
-      */
-      
     }
     
     
@@ -56,11 +51,6 @@ class CategoriesViewController: UIViewController {
             let timelineVC = segue.destinationViewController as! TimelineViewController
             timelineVC.selectedCategory = self.selectedCategory
         }
-//        } else if segue.identifier == "emptyCategorySegue" {
-//            let emptyVC = segue.destinationViewController as! EmptyTimelineViewController
-//            emptyVC.selectedCategory = self.selectedCategory
-//        }
-        
     }
     
     
