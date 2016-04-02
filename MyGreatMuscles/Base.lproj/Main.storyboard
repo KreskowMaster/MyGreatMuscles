@@ -191,9 +191,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Muscles100%" translatesAutoresizingMaskIntoConstraints="NO" id="k4J-KS-Bit">
-                                <rect key="frame" x="50" y="76" width="275" height="489"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc3-OX-Jfu">
                                 <rect key="frame" x="199" y="630" width="120" height="27"/>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.80000000000000004" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
@@ -240,6 +237,9 @@
                                     <action selector="backTapped:" destination="sO1-01-sDW" eventType="touchUpInside" id="tAA-WT-Kag"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Muscles100%" translatesAutoresizingMaskIntoConstraints="NO" id="k4J-KS-Bit">
+                                <rect key="frame" x="50" y="76" width="275" height="489"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -273,7 +273,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GC1-YQ-Y6a">
                             <connections>
                                 <action selector="addTapped:" destination="sO1-01-sDW" id="1tZ-Tk-bCX"/>
-                                <segue destination="F4N-F5-Oa3" kind="show" identifier="goToAddScreenSegue" id="yIK-ZF-n8y"/>
+                                <segue destination="F4N-F5-Oa3" kind="presentation" identifier="goToAddScreenSegue" id="yIK-ZF-n8y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -321,7 +321,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="goTapped:" destination="mM3-Oy-kcu" eventType="touchUpInside" id="7eq-cY-V2e"/>
-                                    <segue destination="F4N-F5-Oa3" kind="show" id="Xgl-cj-dA3"/>
+                                    <segue destination="F4N-F5-Oa3" kind="presentation" identifier="emptyToAddSegue" id="Xgl-cj-dA3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -356,8 +356,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfX-Bc-4z3">
+                                <rect key="frame" x="30" y="597" width="153" height="40"/>
+                                <color key="backgroundColor" red="0.71764707569999997" green="0.65882354970000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Y7K-Nz-WOw"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="F4N-F5-Oa3" eventType="touchUpInside" id="JJg-OD-Wpm"/>
+                                    <action selector="doneTapped:" destination="F4N-F5-Oa3" eventType="touchUpInside" id="yKA-ek-0bK"/>
+                                </connections>
+                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cQ-zj-i8r">
-                                <rect key="frame" x="79" y="464" width="217" height="70"/>
+                                <rect key="frame" x="79" y="380" width="217" height="70"/>
                                 <color key="backgroundColor" red="0.71764707569999997" green="0.65882354970000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Nx9-Eh-4Ki"/>
@@ -377,7 +390,7 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DxS-T4-yyL">
-                                <rect key="frame" x="65" y="405" width="245" height="216"/>
+                                <rect key="frame" x="65" y="307" width="245" height="216"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <date key="date" timeIntervalSinceReferenceDate="480804397.803213">
                                     <!--2016-03-27 20:46:37 +0000-->
@@ -389,7 +402,7 @@
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDK-wk-aiv">
-                                <rect key="frame" x="79" y="117" width="217" height="217"/>
+                                <rect key="frame" x="79" y="50" width="217" height="217"/>
                                 <color key="backgroundColor" red="0.71764707565307617" green="0.65882354974746704" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="217" id="cgk-PV-teo"/>
@@ -405,27 +418,40 @@
                                     <action selector="addPhotoTapped:" destination="F4N-F5-Oa3" eventType="touchUpInside" id="W8X-4S-UAA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQn-mc-kmn">
+                                <rect key="frame" x="193" y="597" width="152" height="40"/>
+                                <color key="backgroundColor" red="0.71764707569999997" green="0.65882354970000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rsW-Q2-hek"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="doneTapped:" destination="F4N-F5-Oa3" eventType="touchUpInside" id="lU1-sT-Aqa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862765550613" green="0.12941177189350128" blue="0.14117647707462311" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2cQ-zj-i8r" firstAttribute="top" secondItem="BDK-wk-aiv" secondAttribute="bottom" constant="130" id="0We-OG-34f"/>
+                            <constraint firstItem="qQn-mc-kmn" firstAttribute="leading" secondItem="SfX-Bc-4z3" secondAttribute="trailing" constant="10" id="2BR-Dh-3AY"/>
                             <constraint firstAttribute="trailing" secondItem="2cQ-zj-i8r" secondAttribute="trailing" constant="79" id="2Dl-XT-Z68"/>
                             <constraint firstAttribute="trailing" secondItem="DxS-T4-yyL" secondAttribute="trailing" constant="65" id="8im-V7-zu1"/>
+                            <constraint firstItem="SfX-Bc-4z3" firstAttribute="width" secondItem="qQn-mc-kmn" secondAttribute="width" id="DUB-9x-zuP"/>
+                            <constraint firstAttribute="trailing" secondItem="qQn-mc-kmn" secondAttribute="trailing" constant="30" id="IJF-9X-fae"/>
+                            <constraint firstItem="SfX-Bc-4z3" firstAttribute="leading" secondItem="0QZ-7N-jaM" secondAttribute="leading" constant="30" id="IT1-Ex-HxR"/>
                             <constraint firstAttribute="trailing" secondItem="BDK-wk-aiv" secondAttribute="trailing" constant="79" id="Kr6-Ls-0mk"/>
-                            <constraint firstItem="BDK-wk-aiv" firstAttribute="top" secondItem="oav-zq-edc" secondAttribute="bottom" constant="53" id="OSh-AY-qcG"/>
-                            <constraint firstItem="H3Y-6C-sm0" firstAttribute="top" secondItem="DxS-T4-yyL" secondAttribute="bottom" constant="46" id="YZV-h4-7Fq"/>
+                            <constraint firstItem="BDK-wk-aiv" firstAttribute="top" secondItem="oav-zq-edc" secondAttribute="bottom" constant="30" id="OSh-AY-qcG"/>
+                            <constraint firstItem="H3Y-6C-sm0" firstAttribute="top" secondItem="qQn-mc-kmn" secondAttribute="bottom" constant="30" id="Tf0-ct-EJN"/>
+                            <constraint firstItem="2cQ-zj-i8r" firstAttribute="centerY" secondItem="DxS-T4-yyL" secondAttribute="centerY" id="Yb7-be-6a9"/>
                             <constraint firstItem="DxS-T4-yyL" firstAttribute="leading" secondItem="0QZ-7N-jaM" secondAttribute="leading" constant="65" id="b4V-ee-9kD"/>
                             <constraint firstItem="2cQ-zj-i8r" firstAttribute="leading" secondItem="0QZ-7N-jaM" secondAttribute="leading" constant="79" id="cDv-xj-QMq"/>
+                            <constraint firstItem="DxS-T4-yyL" firstAttribute="top" secondItem="BDK-wk-aiv" secondAttribute="bottom" constant="40" id="dqy-No-wob"/>
                             <constraint firstItem="BDK-wk-aiv" firstAttribute="leading" secondItem="0QZ-7N-jaM" secondAttribute="leading" constant="79" id="gCm-KF-M7C"/>
+                            <constraint firstItem="H3Y-6C-sm0" firstAttribute="top" secondItem="SfX-Bc-4z3" secondAttribute="bottom" constant="30" id="j42-Ib-rt8"/>
+                            <constraint firstItem="2cQ-zj-i8r" firstAttribute="centerX" secondItem="DxS-T4-yyL" secondAttribute="centerX" id="mtB-xs-UWX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="EDm-64-Lu6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yju-2D-OZ6">
-                            <connections>
-                                <action selector="doneTapped:" destination="F4N-F5-Oa3" id="DuT-Ax-zmC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="p4X-ya-dyb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dateLabel" destination="2cQ-zj-i8r" id="GJV-dV-O9P"/>
@@ -477,6 +503,6 @@
         <image name="TricepsIcon" width="92" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xgl-cj-dA3"/>
+        <segue reference="yIK-ZF-n8y"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,6 +24,7 @@
 		088B4BCA1CA9BD9D00B3F122 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BC91CA9BD9D00B3F122 /* TimelineViewController.swift */; };
 		088B4BCC1CA9BE0B00B3F122 /* AddMuscleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BCB1CA9BE0B00B3F122 /* AddMuscleViewController.swift */; };
 		088B4BCE1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */; };
+		08986DB41CB03BDE00F04EFA /* UIAlertsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08986DB31CB03BDE00F04EFA /* UIAlertsExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		088B4BC91CA9BD9D00B3F122 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		088B4BCB1CA9BE0B00B3F122 /* AddMuscleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMuscleViewController.swift; sourceTree = "<group>"; };
 		088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTimelineViewController.swift; sourceTree = "<group>"; };
+		08986DB31CB03BDE00F04EFA /* UIAlertsExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertsExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		08428D481CA607F60099C069 /* MyGreatMuscles */ = {
 			isa = PBXGroup;
 			children = (
+				08986DB11CB03BC700F04EFA /* Extensions */,
 				0872FF5B1CAB04EB00743978 /* CoreData */,
 				088B4BC61CA9BD2400B3F122 /* ViewControllers */,
 				08615FFB1CA7406000118A1A /* Design */,
@@ -201,6 +204,22 @@
 				088B4BCD1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		08986DB11CB03BC700F04EFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08986DB21CB03BCF00F04EFA /* Alert */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		08986DB21CB03BCF00F04EFA /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				08986DB31CB03BDE00F04EFA /* UIAlertsExt.swift */,
+			);
+			name = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +366,7 @@
 				088B4BCE1CA9BE3E00B3F122 /* EmptyTimelineViewController.swift in Sources */,
 				08428D4C1CA607F60099C069 /* CategoriesViewController.swift in Sources */,
 				08428D4A1CA607F60099C069 /* AppDelegate.swift in Sources */,
+				08986DB41CB03BDE00F04EFA /* UIAlertsExt.swift in Sources */,
 				08428D521CA607F60099C069 /* MyGreatMuscles.xcdatamodeld in Sources */,
 				088B4BCA1CA9BD9D00B3F122 /* TimelineViewController.swift in Sources */,
 			);

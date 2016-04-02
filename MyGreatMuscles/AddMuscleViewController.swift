@@ -31,11 +31,6 @@ class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func addPhotoTapped(sender: AnyObject) {
         
-//        imagePicker.allowsEditing = false
-//        imagePicker.sourceType = .Camera
-//        
-//        presentViewController(imagePicker, animated: true, completion: nil)
-        
         selectPhotoSource()
         
     }
@@ -50,7 +45,16 @@ class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func doneTapped(sender: AnyObject) {
         
-        Muscle.addMuscle(NSDate(), photo: selectedImage!, category: selectedCategory!)
+        if selectedImage != nil {
+            print(datePicker.date)
+            Muscle.addMuscle(datePicker.date, photo: selectedImage!, category: selectedCategory!)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            showAlertWithTitle("Image Empty", message: "Please insert muscle image")
+        }
+    }
+    
+    @IBAction func cancelTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -59,17 +63,18 @@ class AddMuscleViewController: UIViewController, UIImagePickerControllerDelegate
         
         let cancelAction : UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) {
             action in
-            
         }
         actionSheetController.addAction(cancelAction)
         
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+//        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             let cameraAction : UIAlertAction = UIAlertAction(title: "Camera", style: .Default) {
                 action in
-                
+                self.imagePicker.allowsEditing = true
+                self.imagePicker.sourceType = .Camera
+                self.presentViewController(self.imagePicker, animated: true, completion: nil)
             }
             actionSheetController.addAction(cameraAction)
-        }
+//        }
         
         let cameraRollAction : UIAlertAction = UIAlertAction(title: "Camera Roll", style: .Default) {
             action in
