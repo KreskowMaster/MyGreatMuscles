@@ -23,8 +23,10 @@ class EmptyTimelineViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        selectedCategory = Category.getCategory(selectedCategory!.tag!)
+
         if selectedCategory?.muscles?.count > 0 {
-            self.dismissViewControllerAnimated(false, completion: nil)
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     

@@ -18,6 +18,7 @@ class Muscle: NSManagedObject {
         newMuscle.date = date
         newMuscle.photo = UIImageJPEGRepresentation(photo, 1.0)
         newMuscle.category = category
+        
         try! context.save()
     }
     
