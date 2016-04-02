@@ -32,9 +32,6 @@ class TimelineViewController: UIViewController {
         // MARK: - Get All Muscles For Timeline
         timelineMuscles = selectedCategory?.sortedMusclesByDate
         
-        // MARK: - Switch Start Up Values
-        changeValues()
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -44,10 +41,12 @@ class TimelineViewController: UIViewController {
         
         selectedCategory = Category.getCategory(selectedCategory!.tag!)
         if selectedCategory?.muscles?.count > 0 {
-            
+          // MARK: - Switch Start Up Values
+          changeValues()
         } else {
             self.performSegueWithIdentifier("goToAddScreenSegue", sender: self)
         }
+
     }
 
     // MARK: - Timeline Navigation
