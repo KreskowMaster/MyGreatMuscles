@@ -38,13 +38,15 @@ class CategoriesViewController: UIViewController {
         print("CategoriesVC | Tag: \(selectedCategory!.tag!) Name: \(selectedCategory!.title!)")
         
         self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
-        
+      
+      /*
         if selectedCategory?.muscles?.count > 0 {
             self.performSegueWithIdentifier("goToTimelineSegue", sender: self)
         } else {
             self.performSegueWithIdentifier("emptyCategorySegue", sender: self)
         }
-        
+      */
+      
     }
     
     
